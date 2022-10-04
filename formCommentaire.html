@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <title>Document</title>
 </head>
 <style>
@@ -15,19 +17,10 @@
         padding: 20px;
         border-radius: 4px;
         background: #f8f8f8;
-        margin: 20px;
-        
+        margin: 20px; 
     }
-    .comment__picture {
-    position: absolute;
-    padding: 10px;
-}
-.comment__picture img {
    
-    width: 70px;
-}
 .comment:after {
-    content: "";
     position: absolute;
     left: -16px;
     top: 45px;
@@ -38,6 +31,19 @@
     border-bottom: 15px solid transparent;
     border-left: 0 solid transparent;
 }
+
+
+@media (max-width: 767px){
+   .comment {
+    margin: 56px 0 56px 70px;
+} 
+}
+@media (max-width: 767px){}
+.commt-picture {
+    top: 37px;
+    left: -70px;
+}
+
 </style>
 <body>
     <div class="container d-flex">
@@ -45,8 +51,15 @@
             <img src="C:\Users\error51\-mini-blog\utilisateur.png" alt="" style="width: 100px;
             border-radius: 50%;
             border: 4;margin: 40px 10px 10px 30px;">
-            </div>
+        </div>
+        
+
         <div class="comment">
+            <div class="comment-action" style="margin-left:95%;">
+                <a href="#"><ion-icon name="create-outline" style="color: #07075c;"></ion-icon></a>
+                <a href="#"><ion-icon name="trash-outline" style="color: #07075c;"></ion-icon></a>
+            </div>
+            
             <p class="comment-name">Nom Prenom</p>
             <p class="comment-dat">Le Date</p>
         <div class="comment-content">
@@ -54,11 +67,56 @@
                 Repellat, a eos ut, ipsum dolor aut commodi aperiam error distinctio velit deleniti?
             </p>
         </div>
-        <div class="comment-action">
-            <button type="button" class="btn" style="background-color: #07075c;color: #fff;">Update</button>
-            <button type="button" class="btn" style="background-color: #07075c;color: #fff;">Delete</button>
+       
         </div>
     </div>
+
+    <div class="container d-flex">
+        <div class="commt-picture">
+            <img src="C:\Users\error51\-mini-blog\utilisateur.png" alt="" style="width: 100px;
+            border-radius: 50%;
+            border: 4;margin: 40px 10px 10px 30px;">
+        </div>
+        
+
+        <div class="comment">
+
+            <div class="comment-action" style="margin-left:95%;">
+                <a href="#"><ion-icon name="create-outline" style="color: #07075c;"></ion-icon></a>
+                <a href="#"><ion-icon name="trash-outline" style="color: #07075c;"></ion-icon></a>
+            </div>
+            
+            <p class="comment-name">Nom Prenom</p>
+            <p class="comment-dat">Le Date</p>
+        <div class="comment-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sunt adipisci architecto dolorum corrupti, fugit iste voluptates. <br>
+                Repellat, a eos ut, ipsum dolor aut commodi aperiam error distinctio velit deleniti?
+            </p>
+        </div>
+       
+        </div>
+    </div>
+
+    <div class="container d-flex">
+        <div class="commt-picture">
+            <img src="C:\Users\error51\-mini-blog\utilisateur.png" alt="" style="width: 100px;
+            border-radius: 50%;
+            border: 4;margin: 40px 10px 10px 30px;">
+        </div>
+        <div class="comment">    
+            <div class="comment-action" style="margin-left:95%;">
+                <a href="#"><ion-icon name="create-outline" style="color: #07075c;"></ion-icon></a>
+                <a href="#"><ion-icon name="trash-outline" style="color: #07075c;"></ion-icon></a>
+            </div>
+            <p class="comment-name">Nom Prenom</p>
+            <p class="comment-dat">Le Date</p>
+        <div class="comment-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sunt adipisci architecto dolorum corrupti, fugit iste voluptates. <br>
+                Repellat, a eos ut, ipsum dolor aut commodi aperiam error distinctio velit deleniti?
+            </p>
+        </div>
+       
+        </div>
     </div>
 
 </body>
