@@ -1,6 +1,4 @@
 const Joi = require('joi');
-
-
 const categorieValidation = (body) =>{
     const ProductSchema =  Joi.object({
         title : Joi.string().min(3).max(40).trim().required(),
@@ -8,5 +6,4 @@ const categorieValidation = (body) =>{
     })
   return ProductSchema.validate(body)
 }
-
 module.exports  = categorieValidation
