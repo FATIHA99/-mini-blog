@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+</head>
+
+<body>
+  <div class=" d-flex justify-content-center  mt-5">
+    <form class="col-md-6  col-12 border p-3 shadow " action="createOne" method="post"  >
+      <h1 class="text-center text-decoration-underline" style="color: #07075c;"> <i class="bi bi-bookmark-heart-fill"></i> Book Categorie </h1>
+     <!-- title  -->
+      <label for="exampleInputEmail1" class="form-label">Title</label>
+      <!-- <div class="col-8"> -->
+        <div class="mb-3">
+          <input  name= "title" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="title">
+        </div>
+      <!-- </div> -->
+     <!-- description -->
+      <div class="form-floating mb-3">
+        <label for="floatingTextarea2">description</label>
+        <textarea name="description" class="form-control" placeholder="content" id="floatingTextarea2"
+          style="height: 100px"></textarea>
+      </div>
+      <!-- submit -->
+      <div class="container d-flex justify-content-end  ">
+        <!-- <button type="submit" >Add categorie</button> -->
+        <input type="submit" class="btn text-white text-center px-5 fw-5 " style="background-color: #07075c;" value="Add categorie" >
+      </div>
+
+    </form>
+  </div>
+</body>
+
+</html>
