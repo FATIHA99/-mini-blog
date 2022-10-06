@@ -9,6 +9,7 @@ const Article = db.define('article', {
         autoIncrement : true,
         allowNull : false
     },
+
     title : {
         type : DataTypes.STRING,
         allowNull : false
@@ -25,7 +26,7 @@ const Article = db.define('article', {
 
     image : {
         type : DataTypes.STRING,
-        allowNull : false
+        allowNull : true
     }
 }
 );

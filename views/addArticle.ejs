@@ -9,7 +9,7 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
         <style>
             body{
                 font-family: cursive;
@@ -19,46 +19,10 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-        <div class="container-fluid">
-            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-            <!-- <img src="logo.png" style="width: 60px;"> -->
-
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="l.png" alt="logo" width="100" height="70">
-                </a>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Blogs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Categorie</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                <a class="nav-link" href="#">gestion des blogs</a>
-              </li> -->
-
-
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-
+    <%- include ('./navbar'); %>
     <!-- form  -->
     <div class=" d-flex justify-content-center  mt-5">
-        <form class="col-md-6  col-12 border p-3 shadow ">
+        <form class="col-md-6  col-12 border p-3 shadow " method="POST" action="createOne">
             <h1 class="text-center text-decoration-underline" style="color: #07075c;"> <i class="bi bi-bookmark-heart-fill"></i> Book Blog </h1>
             <div class="row">
 
@@ -67,7 +31,7 @@
                 <div class="col-8">
                     <div class="mb-3">
                         <!-- <label for="exampleInputEmail1" class="form-label">title</label> -->
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        <input type="text" class="form-control" name="title" id="exampleInputEmail1" aria-describedby="emailHelp"
                             placeholder="title">
                         <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
                     </div>
@@ -92,12 +56,12 @@
 
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Author</label>
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="auteur">
+                <input type="text" class="form-control" name="author" id="exampleInputPassword1" placeholder="auteur">
             </div>
 
             <div class="form-floating mb-3">
-                <label for="floatingTextarea2">Content</label>
-                <textarea class="form-control" placeholder="content" id="floatingTextarea2"
+                <label for="floatingTextarea2"></label>
+                <textarea class="form-control" placeholder="content" name="content" id="floatingTextarea2"
                     style="height: 100px"></textarea>
 
             </div>
@@ -109,7 +73,7 @@
 
 
             <div class="container d-flex justify-content-end  ">
-                <button type="button" class="btn text-white text-center px-5 fw-5 "
+                <button type="submit" class="btn text-white text-center px-5 fw-5 "
                     style="background-color: #07075c;">Add
                     blog</button>
             </div>
@@ -119,11 +83,11 @@
 
 
 
-
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script>
+        <script src="../script.js"></script>
 </body>
 
 </html>
