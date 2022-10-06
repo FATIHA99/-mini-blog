@@ -1,0 +1,29 @@
+  <%- include('header') %>
+  <%- include('navbar') %>
+    <main class="container mt-5 " style="margin-bottom: 20%;">
+      <a href="/createOne" class="btn btn-outline-primary   text-center px-5 fw-5 "  aria-current="page" ><i class="bi bi-plus-circle me-2"></i>Add Categorie</a>
+      <h1 class="text-center text-bleu text-decoration-underline mb-5" > <i class="bi bi-bookmark-heart-fill"></i> Categories </h1>
+      <div class="d-flex  flex-wrap justify-content-center  ">
+      <!-- cards  -->
+    <% categorie.forEach(e=>{%>
+      <div class="card  mb-3 my-2  m-1 shadow-lg p-3    rounded" style="max-width: 18rem;">
+        <div class="card-body ">
+          <h5 class="card-title"><%=e.title%></h5>
+          <p class="card-text"><%=e.description%></p>
+        </div>
+        <div class="card-footer bg-transparent  row  m-2 ">
+          <form action="deleteOne" method="post" class="col-2">
+            <input type="hidden" name="id" value="<%= e.id %>"" name="id">  
+            <button type="submit"  class="btn  text-danger float-end mb-2 " > <i class="bi bi-trash3 fs-4"></i> </button>
+          </form>
+         <!-- ! update -->
+          <form action="getOne" method="post"  class="col-2">
+            <input type="hidden" name="id" value="<%= e.id %>"" name="id">  
+            <button type="submit"  class="btn  text-success float-end mb-2 " > <i class="bi bi-pencil-square  fs-4"></i></button>
+          </form>
+        </div>
+      </div>
+    <% })%>
+    </div>
+    </main>
+    <%- include('footer') %>
