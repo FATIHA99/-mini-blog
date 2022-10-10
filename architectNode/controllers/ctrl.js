@@ -5,7 +5,7 @@ const Categorie = require("../models/categorie.js");
 const categorieValidation = require("../validation/categorieValidation.js");
 
 
-
+// ! all functions CRUD 
 
 const getAll = (req, res) => {
     Categorie.findAll({

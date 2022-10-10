@@ -5,6 +5,7 @@ const router = Router()
 router.get('/getAll',getAll);
 router.post('/getOne',getOne);
 router.post('/createOne',createOne)
+
 router.get('/createOne',(req,res)=>{
   res.render('form')
 })
